@@ -10,7 +10,7 @@ public class Driver {
 		
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\chromedriver.exe");
 		ChromeOptions options = new ChromeOptions();
-	//	options.addArguments("--headless");
+		options.addArguments("--headless");
 		options.addArguments("start-maximized"); // https://stackoverflow.com/a/26283818/1689770
         options.addArguments("enable-automation"); // https://stackoverflow.com/a/43840128/1689770
         options.addArguments("--ignore-certificate-errors"); // Ignore Certificate Errors
