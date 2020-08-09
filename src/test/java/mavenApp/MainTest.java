@@ -14,7 +14,7 @@ public class MainTest {
 	public void test() throws InterruptedException, MalformedURLException {
 		WebDriver wd = Driver.launchbrowser();
 		System.out.println("Starting Test");
-		wd.get("https://www.google.com");
+		wd.get("http://httpd:80");
 		Thread.sleep(2000);
 		WebElement heading = wd.findElement(By.xpath("/html"));
 		System.out.println(heading.getText());

@@ -1,5 +1,13 @@
 version: "3"
 services:
+  httpd:
+    build:
+      dockerfile: dockerfileHttpd
+      context: .
+    ports: 
+      - "8080:80"
+    expose: 
+      - "80"
   selenium-hub:
     image: selenium/hub
     container_name: selenium-hub
@@ -17,7 +25,5 @@ services:
       
   maven:
     build:
-        dockerfile: dockerfile
+        dockerfile: dockerfilemaven
         context: .
-          
-    
